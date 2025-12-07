@@ -299,7 +299,7 @@ Utilizzando il teorema e $\binom{n}{0}=1$ possiamo calcolare ogni valore di $\bi
         \[\lim_{x\rightarrow0}\frac{\sin x}{x}=1\]
     \end{ex}
     \colorbox{yellow}{Svolgimento}:\qquad Si sfrutta il fatto che:\[\cos x\le\frac{\sin x}{x}\le1\qquad\text{def. per }x\rightarrow0\]
-    \begin{ex}{Dimostrare}{}
+    \begin{ex}{Dimostrare il limite notevole:}{}
         \[\lim_{x\rightarrow0}\frac{1-\cos x}{x^2}=\frac{1}{2}\]
     \end{ex}
     \colorbox{yellow}{Svolgimento}: 
@@ -308,4 +308,27 @@ Utilizzando il teorema e $\binom{n}{0}=1$ possiamo calcolare ogni valore di $\bi
         &=\lim_{x\rightarrow0}\frac{1-\cos^2x}{x^2}\cdot\frac{1}{1+\cos x} =\\
         &=\lim_{x\rightarrow0}\underbrace{\frac{\sin^2x}{x^2}}_{1}\cdot\underbrace{\frac{1}{1+\cos x}}_{1/2}= \frac{1}{2}
     \end{align*}
+    \begin{defi}{Limite notevole}{}
+        \[\lim_{x\rightarrow\pm\infty}(1+\frac{1}{x})^x=e\]
+    \end{defi}
+    \begin{theo}{Teorema della funzione composta o del cambio di variabile}{}
+        Siano $f,g$ funzioni reali di variabile reale, tale che $g$ o $f$ sia definita in un insieme $X$ che abbia $x_0\in\mathbb{\bar{R}}$ come punto di acc. supp.\\
+        \begin{enumerate}
+            \item $\lim_{y\rightarrow y_0}g(y)=l$
+            \item $\lim_{x\rightarrow x_0}f(x)=y_0$
+            \item $f(x)\ne y_0$ def. per $x\rightarrow x_0$
+        \end{enumerate}
+        allora
+        \begin{itemize}
+            \item [] $\lim_{x\rightarrow x_0}g(f(x))=\lim_{y\rightarrow y_0}g(y)=l$\qquad con $y=f(x)$
+        \end{itemize}
+    \end{theo}
+    \begin{ex}{}{}
+        \[\lim_{x\rightarrow0}g(x\cdot\sin\frac{1}{x})\text{ non esiste}\]
+    \end{ex}
+    $g(y)=\qquad\cos y$ se $y\ne0$\qquad$0$ se $y=0$
+    \begin{theo}{Operazioni sui limiti}{}
+        $X\subseteq \mathbb{R},\ f,g$: $X\rightarrow\mathbb{R},\ x_0$ punto di acc. per $X,\ x_0\in\mathbb{\bar{R}}$. Supp.\\
+        \[\lim_{x\rightarrow x_0}f(x)=l_f,\quad\lim_{x\rightarrow x_0}g(x)=l_g,\quad l_f,\ l_g\in\mathbb{R}\]
+    \end{theo}
 \end{document}
